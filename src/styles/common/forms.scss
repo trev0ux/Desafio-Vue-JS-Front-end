@@ -1,0 +1,99 @@
+@import "./variables.scss";
+/* Input styles */
+.inputs {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 1.5rem 0;
+
+
+
+    &:hover {
+
+        input, textarea {
+            border-color: $secondary;
+        }
+
+        &__floatinglabel {
+            color: $secondary;
+        }
+    }
+
+    input, textarea {
+        width: 100%;
+        border: none;
+        border-bottom: 2px solid rgba($silver, 0.4);
+        margin: 10px 0 0 0;
+        color: $light-black;
+        min-height: 34px;
+        background-color: transparent;
+
+        &:focus {
+            outline: none;
+            border-bottom: 2px solid $silver;
+            color: $light-black;
+
+           ~ i {
+                opacity: 1;
+            }
+        }
+    }
+
+    .invalid {
+        color: $error;
+        border-bottom-color: $error;
+    }
+
+    &__inputText {
+        font-size: 16px;
+        height: 35px;
+        position: relative;
+        margin: 13px 0;
+    }
+
+    &__floatinglabel {
+        position: absolute;
+        pointer-events: none;
+        left: 0px;
+        top: 16px;
+        transition: 0.2s ease all;
+        color: rgba($light-black, 0.4);
+        text-transform: capitalize !important;
+
+        font: {
+            size: 16px;
+        }
+    }
+
+    input:focus ~ &__floatinglabel,
+    input:not(:focus):valid ~ &__floatinglabel,
+    textarea:focus ~ &__floatinglabel {
+        top: -5px;
+        bottom: 10px;
+        left: 0px;
+        opacity: 1;
+        color: $silver;
+
+        font: {
+            size: 12px;
+        }
+    }
+
+    textarea.valid ~ &__floatinglabel {
+        top: -5px;
+        bottom: 10px;
+        left: 0px;
+        opacity: 1;
+
+        font: {
+            size: 12px;
+        }
+    }
+
+    i {
+        position: absolute;
+        right: 0;
+        top: 20px;
+    }
+}

@@ -1,0 +1,33 @@
+import Vue from 'vue'
+import Router from 'vue-router'
+import MyAccount from './views/MyAccount.vue'
+import Login from './views/Login.vue'
+
+Vue.use(Router)
+
+const router = new Router({
+  mode: 'history',
+  base: process.env.BASE_URL,
+  routes: [
+    {
+      path: '/',
+      name: 'my-account',
+      component: MyAccount
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: Login
+    },
+    {
+      path: '/register',
+      name: 'register',
+      // route level code-splitting
+      // this generates a separate chunk (about.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import(/* webpackChunkName: "about" */ './views/Register.vue')
+    }
+  ]
+});
+
+export default router;

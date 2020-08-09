@@ -1,0 +1,41 @@
+$font-weight--extra-light: 200;
+$font-weight--light: 300;
+$font-weight--regular: 400;
+$font-weight--medium: 500;
+$font-weight--semibold: 600;
+$font-weight--bold: 700;
+$font-weight--black: 900;
+
+// Colors
+
+$scuba-blue         :   #00ACBA;
+$orange-tea-rose    :   #FE817B;
+$shadow-gray        :   #343434;
+$light-black        :   #4D4E4D;
+$white              :   #FFFFFF;
+$white-smoke        :   #f5f5f5;
+$black              :   #000000;
+$silver             :   #B8B8B8;
+$aqua-haze          :   #E1EEEF;
+$aero               :   #78b9ee;
+$broad-daylight     :   #b9dfff; 
+$blue-tourmaline    :   #4c95d0; 
+$jaded              :   #01919d;
+$magnetic-grey      :   #eff1f5;
+$eye-blue           :   #197dc6;
+$deep               :   #75dbe3;
+$salmon             :   #ee7878;
+$gentle-cold        :   #c5ecef;
+$out-blue           :   #1692e6;
+$christimas-silver  :   #e0e0e0;       
+$primary            : $scuba-blue !default;
+$secondary          : $aero !default;
+$error              : $salmon;
+
+$grey--100: lighten($black, 90%);
+$grey--200: lighten($black, 80%);
+$grey--300: lighten($black, 70%);
+$grey--400: lighten($black, 60%);
+$grey--500: lighten($black, 50%);
+
+

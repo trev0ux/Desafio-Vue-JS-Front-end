@@ -1,0 +1,33 @@
+@import "../variables.scss";
+
+.widget {
+    margin: 20px;
+    height: 50px;
+    text-align: center;
+}
+
+.loader {
+    animation: spin 1s linear infinite;
+    -webkit-animation: spin 1s linear infinite;
+    margin: auto;
+    border-radius: 50%;
+    background: transparent;
+    border: 5px solid $magnetic-grey;
+    border-top: 5px solid $secondary;
+}
+
+@-webkit-keyframes spin {
+    to {
+        border-top-color: $salmon;
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    to {
+        border-top-color: $salmon;
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
