@@ -1,4 +1,3 @@
-# login-animation
 
 ## Project setup
 ```
